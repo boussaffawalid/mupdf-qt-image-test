@@ -29,6 +29,8 @@ enum
 	FZ_IMAGE_PNG = 9,
 	FZ_IMAGE_TIFF = 10,
 	FZ_IMAGE_JXR = 11, /* Placeholder until supported */
+	FZ_IMAGE_GIF = 12,
+	FZ_IMAGE_BMP = 13,
 };
 
 struct fz_compression_params_s
@@ -76,6 +78,6 @@ struct fz_compressed_buffer_s
 	fz_buffer *buffer;
 };
 
-void fz_free_compressed_buffer(fz_context *ctx, fz_compressed_buffer *buf);
+void fz_drop_compressed_buffer(fz_context *ctx, fz_compressed_buffer *buf);
 
 #endif

@@ -8,7 +8,7 @@ int main(int argc, char **argv)
     Q_UNUSED(argv)
 
     // open document
-    QString file = "C:\\Users\\diorahman\\Downloads\\Hoteles_cerca.pdf";
+    QString file = "D:\\boussaffa_walid_resume.cv.pdf";
     MuPDF::Document *document = MuPDF::loadDocument(file);
     if (NULL == document) {
         qDebug() << "no doc";

@@ -15,10 +15,8 @@ typedef struct fz_function_s fz_function;
 void fz_eval_function(fz_context *ctx, fz_function *func, const float *in, int inlen, float *out, int outlen);
 fz_function *fz_keep_function(fz_context *ctx, fz_function *func);
 void fz_drop_function(fz_context *ctx, fz_function *func);
-unsigned int fz_function_size(fz_function *func);
-#ifndef NDEBUG
-void pdf_debug_function(fz_function *func);
-#endif
+unsigned int fz_function_size(fz_context *ctx, fz_function *func);
+void fz_print_function(fz_context *ctx, fz_output *out, fz_function *func);
 
 enum
 {
@@ -33,9 +31,7 @@ struct fz_function_s
 	int m;					/* number of input values */
 	int n;					/* number of output values */
 	void (*evaluate)(fz_context *ctx, fz_function *func, const float *in, float *out);
-#ifndef NDEBUG
-	void (*debug)(fz_function *func);
-#endif
+	void (*print)(fz_context *ctx, fz_output *out, fz_function *func);
 };
 
 #endif

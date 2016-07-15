@@ -11,7 +11,7 @@ CONFIG   -= app_bundle
 
 TEMPLATE = app
 INCLUDEPATH += $$PWD/mu/include
-LIBS += -L$$PWD/mu/lib -llibmupdf -llibthirdparty
+LIBS += -L$$PWD/mu/lib -llibmupdf -llibthirdparty -llibfonts
 
 SOURCES += main.cpp
 

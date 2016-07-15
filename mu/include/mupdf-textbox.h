@@ -25,7 +25,8 @@ public:
 
     QRectF boundingBox() const;
     int numChars() const;
-    QRectF charBoundingBox(int index) const;
+
+    //QRectF charBoundingBox(int index) const;
 //    bool hasSpaceAfter() const;
 //    TextBox *nextWord() const;
     QString text() const;
